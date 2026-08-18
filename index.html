@@ -53,7 +53,7 @@
                 <div class="header-logo-box">
 
                     <img
-                        src="images/header image.png"
+                        src="images/header-image.png"
                         alt="BASANIX Logo"
                     >
 
@@ -262,6 +262,7 @@
 
                 </div>
 
+                
 
 
                 <h2>
@@ -426,7 +427,7 @@
                 <div class="center-logo">
 
                     <img
-                        src="images/small logo.png"
+                        src="images/small-logo.png"
                         alt="BASANIX Main Logo"
                     >
 
@@ -705,7 +706,379 @@
 
         </section>
 
+<!-- =========================================
+     PART 2 — QUIZ DASHBOARD
+========================================== -->
 
+<section
+    id="quiz"
+    class="section quiz-dashboard"
+>
+
+
+    <!-- =====================================
+         QUIZ HEADER
+    ====================================== -->
+
+    <div class="section-heading">
+
+        <span
+            data-en="QUIZ CENTER"
+            data-ne="क्विज केन्द्र"
+        >
+            QUIZ CENTER
+        </span>
+
+
+        <h2>
+
+            <span
+                data-en="Choose Your"
+                data-ne="आफ्नो"
+            >
+                Choose Your
+            </span>
+
+            <strong
+                data-en="Knowledge Zone"
+                data-ne="ज्ञान क्षेत्र"
+            >
+                Knowledge Zone
+            </strong>
+
+        </h2>
+
+
+        <p
+            data-en="Choose a category and challenge your knowledge."
+            data-ne="विषय छनोट गर्नुहोस् र आफ्नो ज्ञानलाई चुनौती दिनुहोस्।"
+        >
+            Choose a category and challenge your knowledge.
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         QUIZ CATEGORY CARDS
+    ====================================== -->
+
+    <div class="cards quiz-cards">
+
+
+        <!-- COMPUTER -->
+
+        <div
+            class="card quiz-card"
+            onclick="openQuiz('Computer')"
+        >
+
+            <div class="card-icon">
+                💻
+            </div>
+
+
+            <h3
+                data-en="Computer Quiz"
+                data-ne="कम्प्युटर क्विज"
+            >
+                Computer Quiz
+            </h3>
+
+
+            <p
+                data-en="Test your knowledge of hardware, software, networking, programming and IT."
+                data-ne="हार्डवेयर, सफ्टवेयर, नेटवर्किङ, प्रोग्रामिङ तथा IT सम्बन्धी आफ्नो ज्ञान परीक्षण गर्नुहोस्।"
+            >
+                Test your knowledge of hardware,
+                software, networking, programming
+                and IT.
+            </p>
+
+
+            <div class="quiz-card-footer">
+
+                <span
+                    data-en="10 Questions"
+                    data-ne="१० प्रश्न"
+                >
+                    10 Questions
+                </span>
+
+
+                <button
+                    type="button"
+                    onclick="event.stopPropagation(); openQuiz('Computer')"
+                    data-en="Start →"
+                    data-ne="सुरु गर्नुहोस् →"
+                >
+                    Start →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NEPAL -->
+
+        <div
+            class="card quiz-card"
+            onclick="openQuiz('Nepal')"
+        >
+
+            <div class="card-icon">
+                🇳🇵
+            </div>
+
+
+            <h3
+                data-en="Nepal Quiz"
+                data-ne="नेपाल क्विज"
+            >
+                Nepal Quiz
+            </h3>
+
+
+            <p
+                data-en="History, geography, culture, constitution and interesting facts about Nepal."
+                data-ne="नेपालको इतिहास, भूगोल, संस्कृति, संविधान तथा रोचक तथ्यसम्बन्धी प्रश्नहरू।"
+            >
+                History, geography, culture,
+                constitution and interesting facts
+                about Nepal.
+            </p>
+
+
+            <div class="quiz-card-footer">
+
+                <span
+                    data-en="10 Questions"
+                    data-ne="१० प्रश्न"
+                >
+                    10 Questions
+                </span>
+
+
+                <button
+                    type="button"
+                    onclick="event.stopPropagation(); openQuiz('Nepal')"
+                    data-en="Start →"
+                    data-ne="सुरु गर्नुहोस् →"
+                >
+                    Start →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SPORTS -->
+
+        <div
+            class="card quiz-card"
+            onclick="openQuiz('Sports')"
+        >
+
+            <div class="card-icon">
+                🏏
+            </div>
+
+
+            <h3
+                data-en="Sports & Cricket"
+                data-ne="खेलकुद तथा क्रिकेट"
+            >
+                Sports & Cricket
+            </h3>
+
+
+            <p
+                data-en="Cricket, football and sports knowledge questions."
+                data-ne="क्रिकेट, फुटबल तथा विभिन्न खेलकुद सम्बन्धी ज्ञान परीक्षण गर्नुहोस्।"
+            >
+                Cricket, football and sports
+                knowledge questions.
+            </p>
+
+
+            <div class="quiz-card-footer">
+
+                <span
+                    data-en="10 Questions"
+                    data-ne="१० प्रश्न"
+                >
+                    10 Questions
+                </span>
+
+
+                <button
+                    type="button"
+                    onclick="event.stopPropagation(); openQuiz('Sports')"
+                    data-en="Start →"
+                    data-ne="सुरु गर्नुहोस् →"
+                >
+                    Start →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GENERAL KNOWLEDGE -->
+
+        <div
+            class="card quiz-card"
+            onclick="openQuiz('General Knowledge')"
+        >
+
+            <div class="card-icon">
+                🌎
+            </div>
+
+
+            <h3
+                data-en="General Knowledge"
+                data-ne="सामान्य ज्ञान"
+            >
+                General Knowledge
+            </h3>
+
+
+            <p
+                data-en="Interesting facts and challenging general knowledge questions."
+                data-ne="रोचक तथ्य तथा चुनौतीपूर्ण सामान्य ज्ञानका प्रश्नहरू।"
+            >
+                Interesting facts and challenging
+                general knowledge questions.
+            </p>
+
+
+            <div class="quiz-card-footer">
+
+                <span
+                    data-en="10 Questions"
+                    data-ne="१० प्रश्न"
+                >
+                    10 Questions
+                </span>
+
+
+                <button
+                    type="button"
+                    onclick="event.stopPropagation(); openQuiz('General Knowledge')"
+                    data-en="Start →"
+                    data-ne="सुरु गर्नुहोस् →"
+                >
+                    Start →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         QUIZ INFO
+    ====================================== -->
+
+    <div class="quiz-info">
+
+        <div class="quiz-info-item">
+
+            <span class="quiz-info-icon">
+                ⏱️
+            </span>
+
+            <div>
+
+                <strong
+                    data-en="10 Seconds"
+                    data-ne="१० सेकेन्ड"
+                >
+                    10 Seconds
+                </strong>
+
+                <small
+                    data-en="Per Question"
+                    data-ne="प्रति प्रश्न"
+                >
+                    Per Question
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="quiz-info-item">
+
+            <span class="quiz-info-icon">
+                🎯
+            </span>
+
+            <div>
+
+                <strong
+                    data-en="Multiple Choice"
+                    data-ne="बहुविकल्पीय"
+                >
+                    Multiple Choice
+                </strong>
+
+                <small
+                    data-en="A / B / C / D"
+                    data-ne="A / B / C / D"
+                >
+                    A / B / C / D
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="quiz-info-item">
+
+            <span class="quiz-info-icon">
+                🏆
+            </span>
+
+            <div>
+
+                <strong
+                    data-en="Final Score"
+                    data-ne="अन्तिम स्कोर"
+                >
+                    Final Score
+                </strong>
+
+                <small
+                    data-en="See Your Result"
+                    data-ne="आफ्नो नतिजा हेर्नुहोस्"
+                >
+                    See Your Result
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
 
         <!-- =========================================
              DOCUMENTS
@@ -885,7 +1258,7 @@
                 <div class="footer-logo-box">
 
                     <img
-                        src="images/footer image.png"
+                        src="images/footer-image.png"
                         alt="BASANIX Footer Logo"
                     >
 
@@ -963,7 +1336,8 @@
 
 
 
-   <script src="./script.js" defer></script>
+    <script src="script.js"></script>
+
     
 
 </body>
