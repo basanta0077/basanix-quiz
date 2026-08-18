@@ -1,0 +1,2422 @@
+/* =========================================
+   BASANIX DIGITAL QUIZ
+   FINAL STYLE
+========================================= */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background: #050816;
+
+    color: #ffffff;
+
+    font-family:
+        Cambria,
+        Georgia,
+        serif;
+
+    transition:
+        font-family .3s ease;
+}
+
+
+/* =========================================
+   NEPALI FONT
+========================================= */
+
+body.nepali {
+
+    font-family:
+        Kokila,
+        "Noto Sans Devanagari",
+        Mangal,
+        sans-serif;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.bg-grid {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0,198,255,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0,198,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        45px 45px;
+}
+
+/* =========================================
+   BASANIX DIGITAL KNOWLEDGE BACKGROUND
+   INTERNET + COMPUTER + NEPAL + SPORTS
+========================================= */
+
+
+/* MAIN INTERNET BACKGROUND */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -20;
+
+    background-image:
+
+        linear-gradient(
+            rgba(3, 7, 20, 0.84),
+            rgba(3, 7, 20, 0.90)
+        ),
+
+        url("images/internet.jpg");
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+
+}
+
+
+/* DIGITAL BLUE/PURPLE LIGHT */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -19;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 25%,
+            rgba(0, 198, 255, 0.16),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 88% 30%,
+            rgba(118, 92, 255, 0.14),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(0, 198, 255, 0.08),
+            transparent 30%
+        );
+
+    animation:
+        backgroundGlow 8s ease-in-out infinite alternate;
+
+}
+
+
+/* =========================================
+   ANIMATED GLOW
+========================================= */
+
+@keyframes backgroundGlow {
+
+    0% {
+
+        opacity: 0.65;
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        opacity: 0.85;
+
+        transform:
+            scale(1.03);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   DIGITAL GRID
+========================================= */
+
+.bg-grid {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 198, 255, 0.045) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 198, 255, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    animation:
+        gridMove 18s linear infinite;
+
+}
+
+
+/* =========================================
+   MOVING DIGITAL GRID
+========================================= */
+
+@keyframes gridMove {
+
+    from {
+
+        background-position:
+            0 0,
+            0 0;
+
+    }
+
+    to {
+
+        background-position:
+            45px 45px,
+            45px 45px;
+
+    }
+
+}
+
+
+/* =========================================
+   HERO BACKGROUND DEPTH
+========================================= */
+
+.hero {
+
+    position: relative;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    left: -180px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 198, 255, 0.08),
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+
+/* =========================================
+   SECTION BACKGROUND GLASS
+========================================= */
+
+.section {
+
+    position: relative;
+
+}
+
+
+.card,
+.document-box,
+.about {
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* =========================================
+   MOBILE BACKGROUND
+========================================= */
+
+@media (max-width: 700px) {
+
+    body::before {
+
+        background-position:
+            center center;
+
+        background-attachment:
+            scroll;
+
+    }
+
+    .bg-grid {
+
+        background-size:
+            32px 32px;
+
+    }
+
+}
+
+.glow {
+
+    position: fixed;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: .12;
+
+    pointer-events: none;
+
+    z-index: -5;
+}
+
+
+.glow-one {
+
+    top: -250px;
+
+    left: -200px;
+
+    background: #0077ff;
+}
+
+
+.glow-two {
+
+    right: -250px;
+
+    bottom: -250px;
+
+    background: #6c2cff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(3,7,20,.88);
+
+    backdrop-filter:
+        blur(20px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.header-inner {
+
+    width: 94%;
+
+    max-width: 1500px;
+
+    min-height: 100px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.header-logo-box {
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(0,198,255,.35);
+
+    background:
+        rgba(0,198,255,.06);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,198,255,.12);
+}
+
+
+.header-logo-box img {
+
+    width: 64px;
+
+    height: 64px;
+
+    object-fit: contain;
+
+    transition: .35s;
+}
+
+
+.header-logo-box:hover img {
+
+    transform:
+        scale(1.08)
+        rotate(2deg);
+}
+
+
+.brand-text h1 {
+
+    font-size: 31px;
+
+    letter-spacing: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #00c6ff,
+            #765cff,
+            #ffffff
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        gradientMove 5s linear infinite;
+}
+
+
+.brand-text span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #8291aa;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3px;
+}
+
+
+.nav-link {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        13px 13px;
+
+    border-radius: 13px;
+
+    color: #c6d0df;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        color .25s,
+        background .25s,
+        transform .25s;
+}
+
+
+.nav-icon {
+
+    font-family:
+        "Segoe UI Emoji",
+        sans-serif;
+
+    font-size: 15px;
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,198,255,.15),
+            rgba(118,92,255,.18)
+        );
+
+    transform:
+        translateY(-2px);
+
+    text-shadow:
+        0 0 10px
+        rgba(0,198,255,.8);
+}
+
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 4px;
+
+    width: 0;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            #00c6ff,
+            #765cff
+        );
+
+    transition: .3s;
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    width: 50%;
+}
+
+
+/* =========================================
+   LANGUAGE BUTTON
+========================================= */
+
+.language-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        12px 15px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        rgba(0,198,255,.4);
+
+    background:
+        rgba(0,198,255,.07);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    white-space: nowrap;
+}
+
+
+.language-btn:hover {
+
+    border-color:
+        #00c6ff;
+
+    background:
+        rgba(0,198,255,.16);
+
+    box-shadow:
+        0 0 20px
+        rgba(0,198,255,.2);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.language-icon {
+
+    font-family:
+        "Segoe UI Emoji",
+        sans-serif;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    width: 94%;
+
+    max-width: 1500px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+.hero-left {
+
+    width: 53%;
+
+    padding:
+        60px 0;
+}
+
+
+.welcome {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 20px;
+
+    color: #00c6ff;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HERO TITLE — CLEAN 3D VERSION
+========================================= */
+
+/* =========================================
+   BASANIX HERO H2 — FINAL
+========================================= */
+
+.hero-left h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    /* तीन line बीचको दूरी */
+    gap: 16px;
+
+    margin: 0 0 38px 0;
+
+    /* g / y / p तल नकटियोस् */
+    padding: 6px 20px 22px 0;
+
+    /* पहिलेभन्दा balanced size */
+    font-size: clamp(52px, 6vw, 78px);
+
+    /* descender का लागि पर्याप्त height */
+    line-height: 1.16;
+
+    letter-spacing: 0;
+
+    font-weight: 900;
+
+    overflow: visible !important;
+}
+
+
+/* प्रत्येक line */
+
+.hero-left h2 span,
+.hero-left h2 strong {
+
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.16;
+
+    white-space: nowrap;
+
+    overflow: visible !important;
+
+    transform: translateZ(0);
+
+    transition:
+        transform .3s ease,
+        filter .3s ease;
+}
+
+
+/* =========================================
+   LEARN
+========================================= */
+
+.hero-left h2 span:first-child {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 0 #d5dbe4,
+        0 4px 0 #929baa,
+        0 6px 0 #5d6675,
+        0 10px 18px rgba(0,0,0,.55);
+}
+
+
+/* =========================================
+   CHALLENGE
+========================================= */
+
+.hero-left h2 strong {
+
+    padding-bottom: 7px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #00eaff 0%,
+            #00a8ff 30%,
+            #596cff 65%,
+            #a04fff 100%
+        );
+
+    background-size: 250% 250%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    filter:
+        drop-shadow(
+            0 5px 4px rgba(0,0,0,.50)
+        )
+        drop-shadow(
+            0 0 16px rgba(0,198,255,.25)
+        );
+
+    animation:
+        challengeGradient 5s ease infinite;
+}
+
+
+/* =========================================
+   WIN
+========================================= */
+
+.hero-left h2 span:last-child {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 0 #d5dbe4,
+        0 4px 0 #929baa,
+        0 6px 0 #5d6675,
+        0 10px 18px rgba(0,0,0,.55);
+}
+
+
+/* =========================================
+   HOVER 3D
+========================================= */
+
+.hero-left h2 span:hover,
+.hero-left h2 strong:hover {
+
+    transform:
+        translateX(8px)
+        translateZ(20px);
+
+    filter: brightness(1.15);
+}
+
+
+/* =========================================
+   CHALLENGE GRADIENT
+========================================= */
+
+@keyframes challengeGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero-left h2 {
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-bottom: 32px;
+
+        padding:
+            5px 12px 20px 12px;
+
+        font-size:
+            clamp(52px, 6vw, 78px);
+
+        line-height: 1.18;
+
+        letter-spacing: 0;
+
+        overflow: visible !important;
+    }
+
+
+    .hero-left h2 span,
+    .hero-left h2 strong {
+
+        line-height: 1.18;
+
+        overflow: visible !important;
+    }
+
+
+    .hero-left h2 strong {
+
+        padding-bottom: 6px;
+    }
+
+}
+
+
+/* सबै title lines */
+
+.hero-left h2 span,
+.hero-left h2 strong {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.12;
+
+    white-space: nowrap;
+
+    overflow: visible;
+
+    transform: translateZ(0);
+
+    transition:
+        transform .3s ease,
+        filter .3s ease;
+}
+
+
+/* =========================================
+   LEARN
+========================================= */
+
+.hero-left h2 span:first-child {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 0 #c9d0da,
+        0 4px 0 #8c96a5,
+        0 7px 0 #525c6b,
+        0 10px 18px rgba(0,0,0,.55);
+
+}
+
+
+/* =========================================
+   CHALLENGE
+========================================= */
+
+.hero-left h2 strong {
+
+    background:
+        linear-gradient(
+            110deg,
+            #00eaff,
+            #009cff,
+            #596cff,
+            #9b52ff
+        );
+
+    background-size: 250% 250%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    filter:
+        drop-shadow(
+            0 5px 4px rgba(0,0,0,.5)
+        )
+        drop-shadow(
+            0 0 16px rgba(0,198,255,.25)
+        );
+
+    animation:
+        challengeGradient 5s ease infinite;
+}
+
+
+/* =========================================
+   WIN
+========================================= */
+
+.hero-left h2 span:last-child {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 0 #c9d0da,
+        0 4px 0 #8c96a5,
+        0 7px 0 #525c6b,
+        0 10px 18px rgba(0,0,0,.55);
+
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.hero-left h2 span:hover,
+.hero-left h2 strong:hover {
+
+    transform:
+        translateX(8px)
+        translateZ(20px);
+
+    filter:
+        brightness(1.15);
+}
+
+
+/* =========================================
+   GRADIENT ANIMATION
+========================================= */
+
+@keyframes challengeGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero-left h2 {
+
+        align-items: center;
+
+        gap: 13px;
+
+        padding-right: 10px;
+
+        font-size:
+            clamp(43px, 13vw, 60px);
+
+        line-height: 1.12;
+
+        letter-spacing: 0;
+
+        margin-bottom: 32px;
+    }
+
+
+    .hero-left h2 span,
+    .hero-left h2 strong {
+
+        line-height: 1.12;
+    }
+
+}
+
+.hero-left p {
+
+    max-width: 670px;
+
+    margin-bottom: 30px;
+
+    color: #a5b2c6;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-bottom: 38px;
+}
+
+
+.btn-primary,
+.btn-secondary {
+
+    padding:
+        15px 23px;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.btn-primary {
+
+    border: none;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087dff,
+            #7140ff
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(60,80,255,.3);
+}
+
+
+.btn-primary:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(60,80,255,.5);
+}
+
+
+.btn-secondary {
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+}
+
+
+.btn-secondary:hover {
+
+    border-color:
+        #00c6ff;
+
+    background:
+        rgba(0,198,255,.07);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+
+    display: flex;
+
+    gap: 14px;
+}
+
+
+.stat {
+
+    min-width: 120px;
+
+    padding:
+        14px 17px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+
+.stat b {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #00c6ff;
+
+    font-size: 25px;
+}
+
+
+.stat small {
+
+    color: #7e8ca2;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RIGHT HERO CIRCLE
+========================================= */
+
+.hero-right {
+
+    position: relative;
+
+    width: 47%;
+
+    height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   RINGS
+========================================= */
+
+.ring {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    pointer-events: none;
+}
+
+
+.ring-one {
+
+    width: 390px;
+
+    height: 390px;
+
+    border:
+        1px solid
+        rgba(0,198,255,.38);
+
+    animation:
+        ringRotate 15s linear infinite;
+}
+
+
+.ring-two {
+
+    width: 460px;
+
+    height: 460px;
+
+    border:
+        1px dashed
+        rgba(0,198,255,.28);
+
+    animation:
+        ringRotateReverse 20s linear infinite;
+}
+
+
+@keyframes ringRotate {
+
+    from {
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+}
+
+
+@keyframes ringRotateReverse {
+
+    from {
+        transform:
+            translate(-50%,-50%)
+            rotate(360deg);
+    }
+
+    to {
+        transform:
+            translate(-50%,-50%)
+            rotate(0deg);
+    }
+}
+
+
+/* =========================================
+   ⭐ CENTER BASANIX LOGO ⭐
+========================================= */
+
+.center-logo {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 300px;
+
+    height: 300px;
+
+    transform:
+        translate(-50%,-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 10;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        rgba(5,8,22,.30);
+
+    border:
+        2px solid
+        rgba(0,198,255,.38);
+
+    box-shadow:
+
+        0 0 35px
+        rgba(0,198,255,.22),
+
+        inset 0 0 40px
+        rgba(0,198,255,.10);
+
+    animation:
+        logoFloat 5s ease-in-out infinite;
+
+    transition: .4s;
+}
+
+
+.center-logo img {
+
+    width: 270px;
+
+    height: 270px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(0,198,255,.65)
+        );
+
+    transition: .4s;
+}
+
+
+.center-logo:hover {
+
+    border-color:
+        #00c6ff;
+
+    box-shadow:
+
+        0 0 55px
+        rgba(0,198,255,.5),
+
+        inset 0 0 50px
+        rgba(0,198,255,.15);
+}
+
+
+.center-logo:hover img {
+
+    transform:
+        scale(1.06);
+}
+
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -9px;
+    }
+}
+
+
+/* =========================================
+   FLOATING CARDS
+========================================= */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 30;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        12px 17px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(8,13,35,.88);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    backdrop-filter:
+        blur(14px);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.25);
+
+    animation:
+        floating 4s ease-in-out infinite;
+}
+
+
+.smart-card {
+
+    top: 48px;
+
+    right: 0;
+}
+
+
+.nepal-card {
+
+    left: 0;
+
+    bottom: 80px;
+
+    animation-delay:
+        .8s;
+}
+
+
+.cricket-card {
+
+    right: 0;
+
+    bottom: 45px;
+
+    animation-delay:
+        1.4s;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-11px);
+    }
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    padding:
+        90px 0;
+}
+
+
+.section-heading {
+
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+
+.section-heading > span {
+
+    color: #00c6ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.section-heading h2 {
+
+    margin:
+        12px 0;
+
+    font-size: 44px;
+
+    line-height: 1.1;
+}
+
+
+.section-heading h2 strong {
+
+    color: #765cff;
+}
+
+
+.section-heading p {
+
+    color: #8290a5;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+
+    min-height: 285px;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    transition: .4s;
+
+    cursor: pointer;
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(0,198,255,.7);
+
+    background:
+        rgba(0,198,255,.045);
+
+    box-shadow:
+        0 20px 55px
+        rgba(0,0,0,.35);
+}
+
+
+.card-icon {
+
+    margin-bottom: 20px;
+
+    font-size: 43px;
+}
+
+
+.card h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 23px;
+}
+
+
+.card p {
+
+    min-height: 80px;
+
+    margin-bottom: 18px;
+
+    color: #8795aa;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+.card button {
+
+    border: none;
+
+    background: none;
+
+    color: #00c6ff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   DOCUMENT
+========================================= */
+
+.document-box {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding:
+        55px 30px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    border:
+        1px dashed
+        rgba(0,198,255,.38);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+
+.document-icon {
+
+    margin-bottom: 15px;
+
+    font-size: 60px;
+}
+
+
+.document-box h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 25px;
+}
+
+
+.document-box p {
+
+    margin-bottom: 25px;
+
+    color: #8290a5;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding:
+        50px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,120,255,.06),
+            rgba(110,60,255,.05)
+        );
+}
+
+
+.about > img {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(0,198,255,.5)
+        );
+}
+
+
+.about > div > span {
+
+    color: #00c6ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.about h2 {
+
+    margin:
+        12px 0 20px;
+
+    font-size: 40px;
+}
+
+
+.about h2 strong {
+
+    color: #00c6ff;
+}
+
+
+.about p {
+
+    max-width: 700px;
+
+    color: #91a0b5;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        #030611;
+}
+
+
+.footer-inner {
+
+    width: 94%;
+
+    max-width: 1450px;
+
+    min-height: 130px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.footer-logo-box {
+
+    width: 100px;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    border:
+        1px solid
+        rgba(0,198,255,.28);
+
+    background:
+        rgba(0,198,255,.05);
+}
+
+
+.footer-logo-box img {
+
+    width: 88px;
+
+    height: 68px;
+
+    object-fit: contain;
+
+    transition: .3s;
+}
+
+
+.footer-logo-box:hover img {
+
+    transform:
+        scale(1.08);
+}
+
+
+.footer-brand h3 {
+
+    margin-bottom: 4px;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-brand p {
+
+    color: #718096;
+
+    font-size: 12px;
+}
+
+
+.footer-info {
+
+    text-align: right;
+
+    color: #718096;
+
+    font-size: 12px;
+
+    line-height: 2;
+}
+
+
+.footer-info strong {
+
+    color: #00c6ff;
+}
+
+
+/* =========================================
+   NOTIFICATION
+========================================= */
+
+.notification {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    z-index: 9999;
+
+    min-width: 240px;
+
+    max-width: 90%;
+
+    padding:
+        14px 22px;
+
+    border-radius: 13px;
+
+    border:
+        1px solid
+        #00c6ff;
+
+    background:
+        rgba(10,18,40,.96);
+
+    color: white;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.35);
+
+    opacity: 0;
+
+    transform:
+        translate(-50%,100px);
+
+    transition:
+        .4s;
+}
+
+
+.notification.show {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%,0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .nav-link {
+
+        padding:
+            10px 8px;
+
+        font-size: 13px;
+    }
+
+
+    .brand-text span {
+
+        display: none;
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+        padding-top: 40px;
+    }
+
+
+    .hero-left,
+    .hero-right {
+
+        width: 100%;
+    }
+
+
+    .hero-left {
+
+        text-align: center;
+    }
+
+
+    .welcome {
+
+        justify-content: center;
+    }
+
+
+    .hero-left p {
+
+        margin:
+            0 auto 30px;
+    }
+
+
+    .hero-buttons,
+    .stats {
+
+        justify-content: center;
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+
+    .header-inner {
+
+        min-height: 78px;
+    }
+
+
+    .nav {
+
+        display: none;
+    }
+
+
+    .brand-text h1 {
+
+        font-size: 23px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .header-logo-box {
+
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .header-logo-box img {
+
+        width: 51px;
+
+        height: 51px;
+    }
+
+
+    .language-btn {
+
+        padding:
+            10px 11px;
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding-bottom: 40px;
+    }
+
+
+    .hero-left {
+
+        padding:
+            50px 0 20px;
+    }
+
+
+    .hero-left h2 {
+
+        font-size:
+            clamp(48px,14vw,65px);
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .hero-left p {
+
+        font-size: 16px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        width: 220px;
+    }
+
+
+    .stats {
+
+        flex-wrap: wrap;
+    }
+
+
+    .stat {
+
+        min-width: 105px;
+    }
+
+
+    .hero-right {
+
+        height: 420px;
+    }
+
+
+    .ring-one {
+
+        width: 280px;
+
+        height: 280px;
+    }
+
+
+    .ring-two {
+
+        width: 340px;
+
+        height: 340px;
+    }
+
+
+    .center-logo {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .center-logo img {
+
+        width: 195px;
+
+        height: 195px;
+    }
+
+
+    .floating-card {
+
+        padding:
+            9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .smart-card {
+
+        top: 40px;
+
+        right: 0;
+    }
+
+
+    .nepal-card {
+
+        left: 0;
+
+        bottom: 65px;
+    }
+
+
+    .cricket-card {
+
+        right: 0;
+
+        bottom: 25px;
+    }
+
+
+    .section {
+
+        padding:
+            65px 0;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 34px;
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+
+        min-height: auto;
+    }
+
+
+    .card p {
+
+        min-height: auto;
+    }
+
+
+    .about {
+
+        flex-direction: column;
+
+        padding:
+            30px 20px;
+
+        text-align: center;
+    }
+
+
+    .about > img {
+
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    .about h2 {
+
+        font-size: 32px;
+    }
+
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding:
+            30px 0;
+
+        text-align: center;
+    }
+
+
+    .footer-info {
+
+        text-align: center;
+    }
+
+}
+
